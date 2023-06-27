@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is your country ?</title>
+</head>
+
+<body>
+    <div>
+        <h1>What are you country ?</h1>
+        <input type="text" name="npais" id="pais">
+        <input type="submit" value="To send" onclick="teupais()">
+        <div id="res">
+            <p></p>
+        </div>
+    </div>
+    <script>
+        function teupais() {
+            var nacional = document.getElementById('pais')
+            var resultado = document.getElementById('res')
+            
+            
+            if(nacional.value == 'brasil' ){
+                var resultado = document.getElementById('res')
+                resultado.innerHTML = 'you are nacionaleit'
+
+           } else{
+                resultado.innerHTML = 'you are foreigner!! '
+           }
+          
+        }
+    </script>
+</body>
+
+</html>
