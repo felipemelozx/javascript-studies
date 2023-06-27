@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cal</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        body {
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.64);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        #num1,
+        #num2 {
+            width: 150px;
+            height: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Type two numbers</h1>
+    <input type="number" name="num1" id="num1">
+    <input type="number" name="num2" id="num2">
+    <input type="submit" value="calculate" onclick="somar()">
+    <div id="resu">Resultado</div>
+
+
+    <script>
+        function somar() {
+
+            var n1 = window.document.getElementById('num1')
+            var n2 = document.getElementById('num2')
+
+            var n1 = Number(n1.value)
+            var n2 = Number(n2.value)
+            var s = n1 + n2
+
+            var res = document.getElementById('resu')
+            res.innerHTML = `A soma entre os ${n1} e ${n2} e de <strong>${s}</strong>`
+        }
+    </script>
+</body>
+
+</html>
